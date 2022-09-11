@@ -19,6 +19,7 @@ void create(int a[],int n)
         {
             head=neww;
             tail=neww;
+            tail->next=head;  // size is 1
         }
         else
         {
@@ -40,6 +41,12 @@ void display(Node *root)
 }
 void split(Node *head, Node** head1, Node** head2)
 {
+    // size is 1
+    if(head->next==tail)
+    {
+        *head1=head;
+        return;
+    }
     Node *slow=head,*fast=head;
     // odd size=fast->next is head
     // even size=fast->next->next is head
@@ -57,8 +64,8 @@ void split(Node *head, Node** head1, Node** head2)
 }
 int main()
 {
-    int i,n=7;
-    int a[n]={4,5,15,6,67,3,8};
+    int i,n=1;
+    int a[n]={4};
     create(a,n);
     display(head);
     
