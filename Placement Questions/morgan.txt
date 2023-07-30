@@ -1,0 +1,47 @@
+b1<->b2<->b3
+
+class Node
+{
+  private:
+    int data;
+    Node *next;
+    Node *prev;
+}
+map<Node *,int> mp;
+void add(Node *head)
+{
+    if(head!=NULL)
+    {
+      if(mp[head]!=mp.end())
+           mp[head]=head->data;
+      else
+           return;
+     }
+}
+main()
+{
+  
+  add(head)
+}
+
+
+
+
+
+
+class - car : capacity=n, currect location
+            destination: name, distance from pickup     
+            person : name, details
+class person extends destination
+       
+
+         person----destination----car (if capacity<n)
+
+
+
+
+
+
+
+
+

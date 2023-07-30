@@ -1,0 +1,15 @@
+student(id, name,dob,address,sub_id)
+subject(id, name)
+
+
+create table student(id int primary key,name char,dob date,address char,sub_id int,foreign key(sub_id) references(subject.id));
+
+create table subject(id int primary key,name char) ;
+
+stuSubjects(sid,subject_id)
+A-abc,def
+
+
+                 A
+inter B           inter  c
+        D imple b,c

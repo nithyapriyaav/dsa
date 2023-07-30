@@ -1,0 +1,48 @@
+1 ->2->3->4->5
+
+head->1
+Node *head;
+Node *curr=head
+Node *temp
+while(curr!=NULL)
+{
+    temp=curr->prev
+    curr->prev=curr->next
+    curr->next=temp
+
+    curr=curr->prev
+}
+if(temp!=NULL)
+    *head=temp->prev;
+Node *curr=head;
+
+
+
+            1 ->root
+        2       3
+    4      5  6   7
+           8           9
+
+sol: 4 8 6 9 l to r
+       9 6 8 4 r to l
+
+void fun(Node *root)
+{
+if(root==null)
+   return;
+if(root->left==null && root->right==null)
+   cout<<root->val<<" ";
+   return;
+if(root->left!=null)
+   fun(root->left)    
+if(root->right!=null)
+   fun(root->right)
+           
+}
+
+ op:9 6 8 4 r to l
+
+
+a=2 
+b=2            2
+c=a+b
